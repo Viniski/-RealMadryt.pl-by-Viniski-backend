@@ -35,5 +35,4 @@ app.use((req, res, next) => {
 app.use("/api", apiRouter);
 app.use("/api", socialsApiRouter);
 
-app.listen(process.env.PORT, function () {
-});
+app.listen(process.env.PORT);

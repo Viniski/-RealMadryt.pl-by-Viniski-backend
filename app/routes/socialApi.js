@@ -21,7 +21,7 @@ router.get("/auth/login/failed", (req, res) => {
 
 router.get("/auth/logout", (req, res) => {
   req.logout();
-  res.redirect("/");
+  res.redirect(process.env.CLIENT_URL);
 });
 
 router.get(
@@ -35,11 +35,11 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "/",
+    successRedirect: process.env.CLIENT_URL,
     failureRedirect: "/auth/login/failed",
   }),
   function (req, res) {
-    res.redirect("/");
+    res.redirect(process.env.CLIENT_URL);
   }
 );
 
@@ -55,7 +55,7 @@ router.get(
   "/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/register" }),
   function (req, res) {
-    res.redirect("/");
+    res.redirect(process.env.CLIENT_URL);
   }
 );
 
@@ -63,7 +63,7 @@ router.get(
   "/auth/twitter/callback",
   passport.authenticate("twitter", { failureRedirect: "/register" }),
   function (req, res) {
-    res.redirect("/");
+    res.redirect(process.env.CLIENT_URL);
   }
 );
 
