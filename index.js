@@ -1,6 +1,5 @@
 const express = require("express");
 require('dotenv').config();
-const path = require("path");
 const app = express();
 const apiRouter = require("./app/routes/api");
 const socialsApiRouter = require("./app/routes/socialApi");
@@ -36,16 +35,5 @@ app.use((req, res, next) => {
 app.use("/api", apiRouter);
 app.use("/api", socialsApiRouter);
 
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "./client/build/index.html"),
-    function (err) {
-      res.status(500).send(err);
-    }
-  );
-});
-
 app.listen(process.env.PORT, function () {
-  console.log("server listen");
 });
