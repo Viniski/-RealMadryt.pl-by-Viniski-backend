@@ -26,7 +26,7 @@ class AuthorizationController {
       process.env.REFRESH_ACCESS_TOKEN,
       async (err, data) => {
         if (err) {
-          return res.sendStatus(403)
+          return res.sendStatus(403);
         }
         const payload = {
           id: data._id,
@@ -48,21 +48,29 @@ class AuthorizationController {
         await isTokenIsCorrect.save();
         res
           .clearCookie("jwt", {
+            path: "/",
+            domain: process.env.COOKIE_DOMAIN,
             withCrdentials: true,
             httpOnly: false,
             maxAge: 15 * 60 * 1000,
           })
           .cookie("jwt", newAccessToken, {
+            path: "/",
+            domain: process.env.COOKIE_DOMAIN,
             withCredentials: true,
             httpOnly: false,
             maxAge: 15 * 60 * 1000,
           })
           .clearCookie("refreshjwt", {
+            path: "/",
+            domain: process.env.COOKIE_DOMAIN,
             withCrdentials: true,
             httpOnly: false,
             maxAge: 24 * 60 * 60 * 1000,
           })
           .cookie("refreshjwt", refreshJWToken, {
+            path: "/",
+            domain: process.env.COOKIE_DOMAIN,
             withCredentials: true,
             httpOnly: false,
             maxAge: 24 * 60 * 60 * 1000,

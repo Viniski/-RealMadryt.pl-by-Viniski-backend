@@ -70,14 +70,14 @@ class UserController {
       res
         .cookie("jwt", jwToken, {
           path: "/",
-          domain: "localhost",
+          domain: process.env.COOKIE_DOMAIN,
           withCredentials: true,
           httpOnly: false,
           maxAge: 15 * 60 * 1000,
         })
         .cookie("refreshjwt", refreshJWToken, {
           path: "/",
-          domain: "localhost",
+          domain: process.env.COOKIE_DOMAIN,
           withCrdentials: true,
           httpOnly: false,
           maxAge: 24 * 60 * 60 * 1000,
@@ -133,14 +133,14 @@ class UserController {
     res
       .clearCookie("refreshjwt", {
         path: "/",
-        domain: "localhost",
+        domain: process.env.COOKIE_DOMAIN,
         withCrdentials: true,
         httpOnly: false,
         maxAge: 24 * 60 * 60 * 1000,
       })
       .clearCookie("jwt", {
         path: "/",
-        domain: "localhost",
+        domain: process.env.COOKIE_DOMAIN,
         withCrdentials: true,
         httpOnly: false,
         maxAge: 15 * 60 * 1000,
