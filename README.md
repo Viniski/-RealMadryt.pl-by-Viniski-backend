@@ -42,15 +42,13 @@ You can find a demo of the application in the frontend repository.
 The frontend and backend are separate projects -- first start the backend
 
 ```zsh
-cd backend
 npm install
-npm node index.js
+node index.js
 ```
 
 Start the frontend (which is in another repository) in a new terminal
 
 ```zsh
-cd frontend
 npm install
 npm run start
 ```
