@@ -7,7 +7,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: `/api/auth/google/callback`,
+      callbackURL: `${process.env.API_BASE_URL}/api/auth/google/callback`,
     },
     function (accessToken, refreshToken, profile, cb) {
       cb(null, profile);
@@ -18,7 +18,7 @@ passport.use(
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: `/api/auth/github/callback`,
+    callbackURL: `${process.env.API_BASE_URL}/api/auth/github/callback`,
   },
   function(accessToken, refreshToken, profile, done) {
     done(null, profile);
