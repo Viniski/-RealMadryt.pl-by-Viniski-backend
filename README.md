@@ -57,6 +57,6 @@ npm install
 npm run start
 ```
 
-## License
+## :page_with_curl: License
 
 This project is licensed under the MIT License.
