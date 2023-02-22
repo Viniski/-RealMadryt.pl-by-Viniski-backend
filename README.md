@@ -37,7 +37,7 @@ This repository contains the back end part of the my application. You can find t
 - Dotenv
 - Randomstring
 
-## Demo
+## :rocket: Demo
 
 You can find a demo of the application in the frontend repository.
 
