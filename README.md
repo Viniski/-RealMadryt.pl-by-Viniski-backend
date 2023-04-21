@@ -19,6 +19,7 @@ This repository contains the back end part of the my application. You can find t
 - Passport.js was used to log in via external portals (google, github).
 - The login status is stored in the session, which expires after 15 minutes, after which you must log in again. Postman was used to test the API.
 - The database used is mongoDB, initially I used it locally on my computer, now the database is located on a remote cloud MongoDB atlas.
+- JEST and React Testing used to test the front-end of application. (being developed)
 
 ## :computer: Built With
 
