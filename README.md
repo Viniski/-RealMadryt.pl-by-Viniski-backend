@@ -4,8 +4,6 @@
 
 Fullstack application inspired by realmadryt.pl. The application front was written using React.js. While the back end was written using Node.js, Express.js and the data was stored in the MongoDB database.
 
-This repository contains the back end part of the my application. You can find the front end here: https://github.com/Viniski/RealMadryt.pl-by-Viniski-frontend
-
 ## :wrench: Descriptions and Technical
 
 - The back end of the application was built, the API connecting to the front end was designed in accordance with the REST standard.
