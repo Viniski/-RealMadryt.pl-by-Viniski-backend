@@ -2,7 +2,7 @@
 
 # BACK-END
 
-Fullstack application inspired by realmadryt.pl. The application front was written using React.js. While the back end was written using Node.js, Express.js and the data was stored in the MongoDB database.
+[Legacy project] Fullstack application inspired by realmadryt.pl. The application front was written using React.js. While the back end was written using Node.js, Express.js and the data was stored in the MongoDB database.
 
 ## :wrench: Descriptions and Technical
 
